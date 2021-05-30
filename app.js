@@ -19,7 +19,7 @@ const client = new MongoClient(uri, {
     useUnifiedTopology: true
 });
 const databaseName = "data";
-let collection;
+let collection; 
 
 
 //MIDDLEWARE
