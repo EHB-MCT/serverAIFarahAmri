@@ -63,3 +63,35 @@ app.listen(port, () => {
         console.log("connected");
     });
 });
+
+// function request() {
+//     axios.get(url)
+//         .then(response => {
+//             let apiResult = response.data;
+//             console.log(apiResult);
+//             collection = db.collection("villoData");
+//             collection.insertMany(apiResult)
+//                 .then(result => {
+//                     console.log(result);
+//                 })
+//                 .catch(error => console.error(error));
+//         })
+//         .catch(error => {
+//             console.error(error);
+//         });
+// }
+
+
+//immediately invoked function expression + needed to do an upgrade to heroku hobby plan
+// (function wake() {
+//     let handler;
+//     try {
+//       handler = setInterval(() => {
+//         request();
+//       }, interval);
+//     } catch(err) {
+//         console.error(err);
+//         clearInterval(handler);
+//         return setTimeout(() => wake(), 10000);
+//     }  
+// })();
