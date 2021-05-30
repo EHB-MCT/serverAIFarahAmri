@@ -37,7 +37,7 @@ app.get('/', function (req, res) {
     const {
         query
     } = req;
-    collection.find(query).limit(15000).toArray(function (err, result) {
+    collection.aggregate([ { $sample: {size: 20000} } ]).toArray(function (err, result) {
         if (err) {
             return res.send(err);
         }
