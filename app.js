@@ -33,7 +33,7 @@ app.use(express.urlencoded({
 }));
 
 
-app.get('/data', function (req, res) {
+app.get('/', function (req, res) {
     //console.log(collection);
     const {
         query
@@ -48,7 +48,7 @@ app.get('/data', function (req, res) {
 
 
 //APP USE
-app.use(express.static(path.join(__dirname, 'front')));
+//app.use(express.static(path.join(__dirname, 'front')));
 //app.use('/api', apiRouter);
 
 
