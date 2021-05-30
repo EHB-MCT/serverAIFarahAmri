@@ -38,18 +38,13 @@ app.get('/', function (req, res) {
     const {
         query
     } = req;
-    collection.find(query).limit(10000).toArray(function (err, result) {
+    collection.find(query).limit(5000).toArray(function (err, result) {
         if (err) {
             return res.send(err);
         }
         res.json(result);
     });
 });
-
-
-//APP USE
-//app.use(express.static(path.join(__dirname, 'front')));
-//app.use('/api', apiRouter);
 
 
 //MONGO DB CONNECTION
